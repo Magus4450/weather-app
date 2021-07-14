@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="hidden loading"></div>
+        <div class="search">
+            
+            <input type="text" id="search_city">
+            <button type="submit" onclick="submit_click()">Submit</button>
+            
+
+        </div>
+
+        <div class="hidden info">     
+            <div class="cross_button" onclick="close_info()">
+                <span></span>
+                <span></span>
+            </div>       
+            
+            <h1 id = "city_name"></h1>   
+            <ul>
+                <li id = temperature><span id="temp"></span></li>
+                <li id = temp_info>
+                    <span id="min-info"><i class="fas fa-temperature-low"></i> <span id="min"></span></span>
+                    <span id="max-info"><i class="fas fa-temperature-high"></i> <span id="max"></span></span>
+                    
+                <li id = stat>                    
+                    <span id="status"></span>
+                    <img id = "icon" alt="condition">
+                </li>
+
+                
+                
+                <li id ="rain"></li>
+                <li id ="humidity_info"><img id ="humidity_icon" src="https://img.icons8.com/ios-glyphs/30/ffffff/humidity.png"/>  <span id="humidity"></span></li>
+                <li id ="pressure_info"><img id ="pressure_icon" src="https://img.icons8.com/material-rounded/24/ffffff/pressure.png"/>  <span id="pressure"></span></li>
+                <li><i class="fas fa-wind"></i> <span id="wind"></span></li>
+
+                
+            </ul>
+        </div>
+
+       
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+   
+   background: url('bg.jpg') no-repeat center center fixed;
+   background-size: cover;   
+   font-family: 'Source Code Pro', monospace;
+   
+}
+i{
+    color: white;
+}
+
+.container{
+    background: rgba(255, 255, 255, .1);
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+    display: flex;
+    align-items:  center;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    
+}
+
+.search input{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    border: transparent;
+    background-color: rgba(255,255,255,0.4);
+    font-size: 1.1rem; 
+}
+.search button{
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.8);
+    border: none;  
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+
+}
+.search button:hover{
+    background-color: rgba(0,0,0,0.1);
+
+}
+
+.cross_button{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    transition: all .5s ease;
+    position: fixed;
+    right: -5%;
+    top: -5%;
+    cursor: pointer;
+
+}
+.cross_button span{
+    position: relative;
+    top: 43%;
+    left: 10%;
+    display: block;
+    content: "";
+    height: 5px;
+    width: 40px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 3%, rgba(0,212,255,1) 60%,rgba(2,0,36,1) 100%);
+
+
+}
+.cross_button span:first-child{
+    transform: rotate(45deg);
+
+}
+.cross_button span:last-child{
+    transform: rotate(-45deg) translateX(1px);
+    transform-origin: 40%;
+
+}
+.cross_button:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.info{
+    background: rgb(180,58,120);
+
+    color: rgba(13, 6, 47, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);    
+    border-radius: 40px;
+    transition: transform .5s;
+}
+
+ul{
+    padding: 0 30px 30px 30px;
+    list-style: none;
+    line-height: 2;
+}
+h1{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    -webkit-text-fill-color: transparent;    
+    -webkit-background-clip: text;
+    padding: .5em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;    
+    border-radius: 20px;
+    font-weight: 700;
+    transition: background-color .5s;
+}
+h1:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+#stat{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px 20px;
+    margin: 20px 0;
+
+}
+#status{
+    font-size: 20px;
+    font-weight: 700;
+}
+#icon{
+    width: 80px;
+}
+
+#temperature{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: .9;
+}
+#temp_info{
+
+    display: flex;
+    justify-content: space-around;    
+    
+    
+}
+#humidity_info{
+    display: flex;
+    align-items: center;
+    
+}
+#humidity_icon{
+    width: 1.3em;
+    margin-right: 4px;
+    
+}
+#pressure_info{
+    display: flex;
+    align-items: center;
+    
+}
+#pressure_icon{
+    width: 1.3em;
+    margin-right: 4px;
+    
+}
+#max-info{
+    color: rgb(207, 52, 31);
+}
+#min-info{
+    color: rgb(86, 86, 236);
+    margin-right: 15px;
+}
+.loading {
+    border: 5px solid #f3f3f3; 
+    border-top: 5px solid rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/* Helper Class */
+.hidden { 
+    display: none;
+}
